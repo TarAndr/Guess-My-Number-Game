@@ -22,7 +22,7 @@ function resetGame() {
     msgSelector.textContent = 'Start guessing...';
     centerDivSpan.textContent = '?';
     guessInput.value = '';
-    setContainerColor('#444444');
+    setBackgroundColor('#222222');
 
     guessInput.disabled = false;
     btnCheck.disabled = false;
@@ -44,13 +44,13 @@ guessInput.addEventListener('keydown', function(event) {
 
 function checkAnswer() {
     const guess = Number(guessInput.value);
-    guessInput.value = '';
-    if (!guess) {
+    if (guessInput.value.trim() === '') {
         msgSelector.textContent = 'No number';
     } else if (guess < 1 || guess > 20) {
         msgSelector.textContent = 'The number must be between 1 and 20!';
     } else {
         compareAnswer(guess, secretQuantity);
+        guessInput.value = '';
     }
 }
 
@@ -70,13 +70,13 @@ function compareAnswer(answer, secret) {
     }
 }
 
-function setContainerColor(color) {
-    document.querySelector('.app-container').style.backgroundColor = color;
+function setBackgroundColor(color) {
+    document.documentElement.style.setProperty('--main-bg-color', color);
 }
 
 function youWin() {
     stopGame();
-    setContainerColor('#447744');
+    setBackgroundColor('#447744');
     msgSelector.textContent = 'Correct Number!';
     centerDivSpan.textContent = secretQuantity;
     
@@ -89,7 +89,7 @@ function youWin() {
 
 function gameOver() {
     stopGame();
-    setContainerColor('#994444');
+    setBackgroundColor('#994444');
     msgSelector.textContent = 'You lost the game!';
 }
 
@@ -103,5 +103,6 @@ function clearHS(){
         highscore = 0;
         localStorage.setItem('guessGameHighscore', highscore);
         highscoreSelector.textContent = highscore;
+        resetGame();
     }
 }
