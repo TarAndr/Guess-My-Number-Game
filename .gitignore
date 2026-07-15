@@ -1,3 +1,14 @@
+.DS_Store
+Thumbs.db
+
+*.pdf
+
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+
 # Logs
 logs
 *.log
