@@ -3,7 +3,7 @@
 A sleek, highly responsive web game built with pure JavaScript (Vanilla JS). The player's goal is to guess a randomly generated secret number between 1 and 20 in the fewest attempts possible.
 
 ## 🚀 Live Demo
-> [![Play Game](https://shields.io)](https://tarandr.github.io/Guess-My-Number-Game/)
+> You can play the game directly in your browser: **[Play Game Guess My Number](https://tarandr.github.io/Guess-My-Number-Game/)**
 
 ---
 
@@ -32,11 +32,11 @@ A sleek, highly responsive web game built with pure JavaScript (Vanilla JS). The
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/guess-my-number.git
+   git clone https://github.com/TarAndr/Guess-My-Number-Game.git
    ```
 2. Navigate into the project folder:
    ```bash
-   cd guess-my-number
+   cd Guess-My-Number-Game
    ```
 3. Open `index.html` in your favorite browser (or launch it using the *Live Server* extension in VS Code).
 
